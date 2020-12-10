@@ -15,7 +15,7 @@ Vue.config.productionTip = false
 // 此处可以放置的内容3:全局对象Vue的
 // String.prototype.xxx
 // axios.defaults.baseURL="http://myweb.applinzi.com"  //异步请求基础地址  新浪云地址
-axios.defaults.baseURL='http://127.0.0.1:5050'   //测试接口
+axios.defaults.baseURL=''   //测试接口
 axios.defaults.headers.post['Content-Type']='application/json'  //所有POST请求内容类型
 axios.defaults.withCredentials=true  //axios解决跨域session 让异步请求携带身份认证信息(sid)
 // vue自定义扩展属性 都以$开头

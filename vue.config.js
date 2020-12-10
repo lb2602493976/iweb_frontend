@@ -20,6 +20,12 @@ module.exports={
 				
 			// }
 	    // subpage: 'src/subpage/main.js'
-	  }
+		},
+		devServer:{
+			open:true,
+			port:8080,
+			proxy:"http://localhost:5050",
+
+		},
 
 }

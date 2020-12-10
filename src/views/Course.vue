@@ -8,11 +8,11 @@
         <section class="course_tag">
             <span>课程等级：</span>
 						<router-link to="" :class="{active:true}">不限</router-link>
-						<router-link :to="'/course?type='+item.tpid" :class="{active:pageNum==item}" v-for="(item,index) of course">{{item.tpname}}</router-link>
+						<router-link :to="'/course?type='+item.tpid" :class="{active:pageNum==item}" v-for="(item,index) of course" :key="index">{{item.tpname}}</router-link>
         </section>
         <section class="course_list">
             <ul>
-                <li class="clearfloat" v-for="(item,index) of list">
+                <li class="clearfloat" v-for="(item,index) of list" :key="index">
                     <router-link :to="'/course-detail/:'+item.cid" class="course_img">
 											<img :src="require('../assets/'+item.pic)" >
 											<!-- <img src="../assets/img-course/06.png"> -->

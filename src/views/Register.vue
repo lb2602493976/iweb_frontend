@@ -55,23 +55,22 @@
 <script>
 	import Header from '@/components/Header.vue'
 	import Footer from '@/components/Footer.vue'
-
 	export default {
 		data: () => {
 			return {
 				//captchaURL: this.$http.defaults.baseURL + '/user/register/captcha'
 				//对象的属性中，不能使用另一个属性的值进行拼接——不能使用this
 				randNum: Math.random(),	//为了拼接一个随机的查询字符串而准备的随机数
-				uname: '',		//用户名（邮箱）
+				uname: '2602493971@qq.com',		//用户名（邮箱）
 				unameIconClass: {'icon_error':true, 'icon_ok':false},
 				unameMsg: '',
-				phone: '',		//手机号码
+				phone: '14444444444',		//手机号码
 				phoneIconClass:{'icon_error':true, 'icon_ok':false},
 				phoneMsg:'',
-				upwd: '',				//密码
+				upwd: 'Lb99116',				//密码
 				upwdIconClass:{'icon_error':true, 'icon_ok':false},
 				upwdMsg:'',
-				upwd2:'',				//重复密码
+				upwd2:'Lb99116',				//重复密码
 				upwd2IconClass:{'icon_error':true, 'icon_ok':false},
 				upwd2Msg:'',
 				captcha: '',			//验证码
@@ -187,9 +186,9 @@
 					uname: this.uname,
 					upwd: this.upwd,
 					phone: this.phone,
-					captcha: this.captcha
+					captcha: this.captcha,
 				}
-				console.log(this.captcha)
+				console.log('111',this.captcha)
 				//异步请求服务器端“用户注册API”
 				this.$http.post('/user/register', data).then(res=>{
 					if(res.data.code===200){
