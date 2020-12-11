@@ -74,6 +74,7 @@ export default{
 				}
 				},
 				// 验证密码是否为空
+				// 1
 			checkUpwd(){
 				if(!this.upwd){
 					this.msg1Show='block';
